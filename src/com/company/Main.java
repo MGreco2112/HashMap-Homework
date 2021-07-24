@@ -41,38 +41,24 @@ public class Main {
                 }
             }
 
-            System.out.println(zineMap + "\n" + noteMap);
-
-            ArrayList<String> zineMapKeys = new ArrayList<>();
-            ArrayList<String> noteMapKeys = new ArrayList<>();
-
-            int zineWordCount = 0;
-            while (zineMapKeys.size() < magazine.size()) {
-                zineMapKeys.add(magazine.get(zineWordCount));
-                zineWordCount++;
-            }
-            int noteWordCount = 0;
-            while (noteMapKeys.size() < note.size()) {
-                noteMapKeys.add(note.get(noteWordCount));
-                noteWordCount++;
-            }
-
-            Collections.sort(zineMapKeys);
-            Collections.sort(noteMapKeys);
-
-            for (int i = 0; i < zineMapKeys.size(); i++) {
-                for (int j = 0; j < noteMapKeys.size(); j++) {
-
-                        // if common key values are all equal sout "Yes"
-                        // else sout "No"
-
-                }
-            }
+//            System.out.println(zineMap + "\n" + noteMap);
 
 
+             for (int i = 0; i < note.size(); i++) {
+                 if (!zineMap.get(note.get(i)).equals(noteMap.get(note.get(i)))) {
+                     System.out.println("No");
+                     return;
+                 }
+             }
+
+            System.out.println("Yes");
+
+
+        } else {
+            System.out.println("No");
         }
 
-//        System.out.println("Yes");
+
 
     }
 
